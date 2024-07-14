@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.title h1 {
+    font-size: 28px;
+    font-weight: 500;
+    letter-spacing: 0;
+    line-height: 1.5em;
+    margin-bottom: 10px;
+}
+
+.inputs {
+    display: flex;
+    gap: 10px;
+}
+
+.input1 {
+    width: 30%;
+    border: 10px solid rgb(209, 22, 22);
+    color: red;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.input2 {
+    width: 70%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.succ {
+    color: green;
+    margin-bottom: 3px;
+}
+
+.err {
+    color: red;
+    margin-top: 5px;
+}
+
+.tasks {
+    margin-top: 12px;
+}
+
+.list-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.input {
+    width: 100%;
+}
+
+.flex-icon {
+
+    position: absolute;
+    right: 5px;
+}
+
+.update-field {
+    display: flex;
+    flex-direction: row;
+}
+
+.input2 {
+    width: 200%;
+}
+
+.Edit_delete {
+    display: flex;
+    position: absolute;
+    right: 0;
+}
+
+@media only screen and (max-width: 565px) {
+    .flex-icon {
+        display: flex;
+        flex-direction: column;
+        gap: -20px;
+    }
+
+    .input2 {
+        width: 100%;
+    }
+
+    .update-field {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .inputs {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .input {
+        width: 100%;
+    }
+
+    .input2 {
+        width: 100%;
+    }
+
+    .flex-icon {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .update-field {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+@media only screen and (max-width: 360px) {
+    .Edit_delete {
+        flex-direction: column;
+        right: 5px;
+    }
+}
