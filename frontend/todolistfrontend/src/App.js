@@ -28,7 +28,9 @@ function App() {
     setErr("")
     if (title.trim() !== "" && desc.trim() !== "") {
       let data = { title: title, description: desc }
-      await axios.post(`http://localhost:4000/todos`, data)
+      // await axios.post(`http://localhost:4000/todos`, data)
+      // https://mern-stack-todolist-1.onrender.com
+      await axios.post(`https://mern-stack-todolist-1.onrender.com/todos`, data)
         .then((res) => {
           setItems((prev) => {
             return [...prev, { title: title, description: desc, _id: res.data._id }]
@@ -46,7 +48,7 @@ function App() {
   }
 
   const getItems = async () => {
-    await axios.get(`http://localhost:4000/todos`)
+    await axios.get(`https://mern-stack-todolist-1.onrender.com/todos`)
       .then(res => setItems(res.data))
       .catch(err => console.log(err))
   }
@@ -66,7 +68,7 @@ function App() {
     setErr("")
     if (updatedTitle.trim() !== "" && updatedDesc.trim() !== "") {
       let data = { title: updatedTitle, description: updatedDesc }
-      await axios.put(`http://localhost:4000/todos/${editId}`, data)
+      await axios.put(`https://mern-stack-todolist-1.onrender.com/todos/${editId}`, data)
         .then((res) => {
           let updatedTodos = items.map((list) => {
             if (list._id === editId) {
@@ -92,7 +94,7 @@ function App() {
     setEditId(-1)
   }
   const handleDelete = async (id) => {
-    await axios.delete(`http://localhost:4000/todos/${id}`)
+    await axios.delete(`https://mern-stack-todolist-1.onrender.com/todos/${id}`)
       .then((res) => {
         const remaingItems = items.filter((item) => item._id !== id)
         setItems(remaingItems)
